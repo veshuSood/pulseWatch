@@ -22,7 +22,7 @@ function AuthForm({ onLogin }) {
   const handleGoogleAuth = () => {
     window.location.href =
       window.location.href =
-  `${API_URL}/oauth2/authorization/google`;
+   `${API_URL.replace('/api', '')}/oauth2/authorization/google`;
   };
 
   const handleSubmit = async (event) => {
