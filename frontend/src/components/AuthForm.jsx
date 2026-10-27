@@ -3,10 +3,12 @@ import { useState } from 'react';
 import axios from 'axios';
 import './AuthForm.css';
 
-const API_URL = (
+const API_BASE_URL =
   import.meta.env.VITE_API_BASE_URL ||
-  'http://localhost:8080'
-) + '/api';
+  'http://localhost:8080';
+  
+const API_URL = `${API_BASE_URL}/api`;
+
 
 function AuthForm({ onLogin }) {
   const [isRegister, setIsRegister] = useState(false);
@@ -19,11 +21,10 @@ function AuthForm({ onLogin }) {
   });
   const [loading, setLoading] = useState(false);
 
-  const handleGoogleAuth = () => {
-    window.location.href =
-      window.location.href =
-   `${API_URL.replace('/api', '')}/oauth2/authorization/google`;
-  };
+ const handleGoogleAuth = () => {
+  window.location.href =
+    `${API_BASE_URL}/oauth2/authorization/google`;
+};
 
   const handleSubmit = async (event) => {
     event.preventDefault();
