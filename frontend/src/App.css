@@ -1,0 +1,183 @@
+
+/* ===== PulseWatch dashboard ===== */
+
+.app {
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 32px 40px;
+  background: #f9fafb;
+  color: #111827;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  text-align: left;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 0;
+  margin-bottom: 28px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.header h1 {
+  margin: 0;
+  color: #111827;
+  font-size: 1.5rem;
+  font-weight: 650;
+  letter-spacing: -0.5px;
+}
+
+.header p {
+  margin: 5px 0 0;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.logout-button {
+  flex-shrink: 0;
+  padding: 8px 13px;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  background: #ffffff;
+  color: #374151;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background: #f3f4f6;
+}
+
+.app main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.app main > h2,
+.monitor-form > h2 {
+  margin: 0 0 18px;
+  color: #111827;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+.monitor-form {
+  max-width: 1200px;
+  box-sizing: border-box;
+  margin: 0 auto 32px;
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 7px;
+  background: #ffffff;
+}
+
+.monitor-form form {
+  display: grid;
+  grid-template-columns: 1fr 2fr 150px auto;
+  align-items: end;
+  gap: 16px;
+}
+
+.monitor-form label {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: #374151;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.monitor-form input {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  background: #ffffff;
+  color: #111827;
+  font: inherit;
+}
+
+.monitor-form input:focus {
+  outline: 2px solid rgb(37 99 235 / 15%);
+  border-color: #2563eb;
+}
+
+.monitor-form form > button {
+  padding: 10px 15px;
+  border: 1px solid #1d4ed8;
+  border-radius: 5px;
+  background: #2563eb;
+  color: #ffffff;
+  font: inherit;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.monitor-form form > button:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+.stats-container > * {
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 7px;
+  background: #ffffff;
+}
+
+@media (max-width: 800px) {
+  .app {
+    padding: 0 20px 32px;
+  }
+
+  .monitor-form form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .monitor-form form > button {
+    align-self: end;
+  }
+}
+
+@media (max-width: 520px) {
+  .app {
+    padding: 0 14px 24px;
+  }
+
+  .header {
+    align-items: flex-start;
+  }
+
+  .monitor-form {
+    padding: 16px;
+  }
+
+  .monitor-form form,
+  .stats-container {
+    grid-template-columns: 1fr;
+  }
+
+  .monitor-form form > button {
+    width: 100%;
+  }
+}
+

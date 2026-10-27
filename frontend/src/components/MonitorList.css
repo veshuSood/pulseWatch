@@ -1,0 +1,100 @@
+
+/* PulseWatch monitor table */
+
+.monitor-section {
+  width: 100%;
+  min-width: 0;
+  color: #111827;
+}
+
+.monitor-section h2 {
+  margin: 0 0 18px;
+  color: #111827;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.monitor-table-container {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 7px;
+  background: #ffffff;
+}
+
+.monitor-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  color: #1f2937;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.monitor-table thead {
+  background: #f3f4f6;
+}
+
+.monitor-table th {
+  padding: 13px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  color: #374151;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.monitor-table td {
+  padding: 15px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  color: #374151;
+  vertical-align: middle;
+}
+
+.monitor-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.monitor-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+.monitor-table td:first-child strong {
+  display: inline-block;
+  margin-bottom: 5px;
+  color: #111827;
+  font-weight: 600;
+}
+
+.monitor-table td:first-child small {
+  color: #6b7280;
+  font-size: 0.85rem;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 700px) {
+  .monitor-table {
+    min-width: 720px;
+  }
+}
+
+.delete-monitor-button {
+  padding: 7px 11px;
+  border: 1px solid #fecaca;
+  border-radius: 5px;
+  background: #ffffff;
+  color: #b91c1c;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.delete-monitor-button:hover:not(:disabled) {
+  background: #fef2f2;
+  border-color: #f87171;
+}
+
+.delete-monitor-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
