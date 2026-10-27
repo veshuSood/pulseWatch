@@ -7,7 +7,10 @@ import StatCard from './components/StatCard';
 import MonitorList from './components/MonitorList';
 import AuthForm from './components/AuthForm';
 
-const API_BASE_URL = 'http://localhost:8080/api';
+const API_BASE_URL = (
+  import.meta.env.VITE_API_BASE_URL ||
+  'http://localhost:8080'
+) + '/api';
 
 function getUserEmail(token) {
   try {
