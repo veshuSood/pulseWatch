@@ -33,7 +33,7 @@ function AuthForm({ onLogin }) {
 
     try {
       if (isRegister) {
-        await axios.post(`${API_URL}/register`, {
+        await axios.post(`${API_URL}/auth/register`, {
           name,
           email,
           password,
@@ -45,7 +45,7 @@ function AuthForm({ onLogin }) {
         return;
       }
 
-      const response = await axios.post(`${API_URL}/login`, {
+      const response = await axios.post(`${API_URL}/auth/login`, {
         email,
         password,
       });
